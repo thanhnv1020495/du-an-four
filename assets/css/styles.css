@@ -7,6 +7,7 @@ html {
 }
 
 body {
+    min-height: 2000vh;
     font-size: 1.6rem;
     font-family: "Sora", serif;
 }
@@ -19,6 +20,7 @@ body {
 }
 
 /* common */
+
 :root {
     --primary-color: #10375c;
     --second-color: #2e80ce;
@@ -27,6 +29,11 @@ body {
 a {
     text-decoration: none;
     cursor: pointer;
+}
+
+input ,textarea ,select, button {
+    font-family: inherit;
+    font-size: inherit;
 }
 
 .member__control {
@@ -99,10 +106,16 @@ a {
 }
 /*  header  */
 
+.header-top.header-fixed {
+    background: var(--primary-color);
+    position: sticky;
+    top: -10px;
+    z-index: 1;
+}
+
 .header {
     min-height: 100vh;
     background: var(--primary-color);
-    padding-top: 30px;
 }
 
 .logo {
@@ -154,6 +167,8 @@ a {
 /* header-top */
 
 .header-top {
+    padding: 30px 0 8px;
+    background: var(--primary-color);
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -634,7 +649,7 @@ a {
     border-radius: 12px;
     background: #fff;
     box-shadow: 0px 18px 50px 0px rgba(0, 0, 0, 0.05);
-    transition: 0.3s ease;  
+    transition: 0.3s ease;
     transform: translateY(-20px);
 }
 
@@ -674,20 +689,19 @@ a {
     padding: 18px 22px 21px;
 }
 
-
 .new__row-thumb {
     object-fit: cover;
     width: 100%;
     height: 172px;
-    border-radius: 12px 12px 0 0 ;
+    border-radius: 12px 12px 0 0;
     display: block;
 }
 
 /* appointment */
 
 .appointment {
-   margin: 85px 0 170px;
-   background: #F6FBFF;
+    margin: 85px 0 170px;
+    background: #f6fbff;
 }
 
 .appointment__inner {
@@ -705,7 +719,7 @@ a {
     position: absolute;
     left: 50%;
     transform: translateX(-50%);
-    content: "";  
+    content: "";
     display: inline-block;
     background: var(--second-color);
     width: 136px;
@@ -727,3 +741,136 @@ a {
 }
 
 /* footer */
+.footer {
+    font-family: "Open Sans", sans-serif;
+    background: var(--primary-color);
+    padding: 100px 0;
+}
+
+.footer__row {
+    display: grid;
+    grid-template-columns: 336px 132px 132px 332px;
+    column-gap: 78px;
+}
+
+.footer__desc {
+    margin-top: 21px;
+    min-width: 336px;
+    color: #a9b3bb;
+    font-size: 1.6rem;
+    font-weight: 400;
+    line-height: 1.75; /* 175% */
+}
+
+.footer__heading {
+    margin-bottom: 20px;
+    color: #fff;
+    font-size: 1.6rem;
+    font-weight: 600;
+    line-height: 1.75; /* 175% */
+}
+
+.footer__item {
+    margin-top: 10px;
+}
+
+.footer__link {
+    white-space: nowrap;
+
+    color: #a9b3bb;
+    font-size: 1.4rem;
+    font-weight: 400;
+    line-height: 1.85; /* 185.714% */
+}
+
+.footer__heading-second {
+    margin-top: 28px;
+    margin-bottom: 20px;
+}
+
+
+.footer__item-second {
+    margin-bottom: 14px;
+    display: inline-block;
+}
+
+.footer__script::before {
+    content: "";
+    margin: 28px 0;
+    width: 1170px;
+    height: 1px;
+    display: inline-block;
+    background: #406181;
+}
+
+.footer__desc-title {
+    max-width: 273px;
+}
+
+.footer__row-icon {
+    margin-bottom: 28px;
+    display: flex;
+    column-gap: 10px;
+    align-items: center;
+}
+
+.footer__script {
+    color: #aab3ba;
+    text-align: center;
+    font-family: "Open Sans";
+    font-size: 1.4rem;
+    font-weight: 400;
+    line-height: 1.85; /* 185.714% */
+}
+
+.footer-form {
+    column-gap: 12px;
+    display: flex;
+    margin-top: 12px;
+}
+
+.footer-form__input {
+    padding: 0 10px;
+    outline: none;
+    background: transparent;
+    width: 212px;
+    height: 46px;
+    border-radius: 4px;
+    border: 1px solid #406181;
+}
+
+.footer-form__input::placeholder {
+    color: #9ca8b1;
+    font-size: 1.4rem;
+    font-weight: 400;
+    line-height: 1.85; /* 185.714% */
+}
+
+.footer__submit {
+    min-width: 108px;
+    height: 46px;
+    border-radius: 4px;
+    background: var(--second-color);
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.6rem;
+}
+
+.footer__social-btn {
+    color: var(--second-color);
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    background: #fff;
+}
+
+.footer__social-btn:hover {
+    background: var(--second-color);
+    color: #fff;
+}
+
