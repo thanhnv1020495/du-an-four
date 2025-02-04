@@ -7,7 +7,6 @@ html {
 }
 
 body {
-    min-height: 2000vh;
     font-size: 1.6rem;
     font-family: "Sora", serif;
 }
@@ -105,8 +104,7 @@ input ,textarea ,select, button {
     cursor: pointer;
 }
 /*  header  */
-
-.header-top.header-fixed {
+.fixed-header {
     background: var(--primary-color);
     position: sticky;
     top: -10px;
@@ -214,7 +212,7 @@ input ,textarea ,select, button {
 
 /* hero */
 .hero {
-    margin-top: 76px;
+    padding-top: 76px;
     display: flex;
     align-items: center;
 }
@@ -744,7 +742,7 @@ input ,textarea ,select, button {
 .footer {
     font-family: "Open Sans", sans-serif;
     background: var(--primary-color);
-    padding: 100px 0;
+    padding: 100px 0 42px;
 }
 
 .footer__row {
